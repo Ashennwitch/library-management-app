@@ -12,17 +12,6 @@ public class LibraryController {
         this.borrowedBooksModel = borrowedBooksModel;
     }
 
-    public void displayAvailableBooks() {
-        List<Book> books = libraryModel.getBooks();
-        System.out.println("Available Books:");
-        for (int i = 0; i < books.size(); i++) {
-            Book book = books.get(i);
-            if (book.isAvailable()) {
-                System.out.println((i + 1) + ". " + book.getTitle());
-            }
-        }
-    }
-
     public void addBook(String title) {
         Book newBook = new Book(title);
         libraryModel.addBook(newBook);
@@ -52,7 +41,6 @@ public class LibraryController {
         }
     }
 
-<<<<<<< HEAD
     public void returnBook(String title) {
         // Find the book in the library model and mark it as available
         for (Book book : libraryModel.getBooks()) {
@@ -64,14 +52,6 @@ public class LibraryController {
         // Remove the book from the borrowed books model
         borrowedBooksModel.returnBorrowedBook(title);
     }
-
-=======
->>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
-    public void displayBorrowedBooks() {
-        borrowedBooksModel.loadBorrowedBooksFromFile();
-        borrowedBooksModel.displayBorrowedBooks();
-    }
-<<<<<<< HEAD
 
     public String getAvailableBooks() {
         List<Book> books = libraryModel.getBooks();
@@ -97,6 +77,4 @@ public class LibraryController {
         return sb.toString();
     }
 
-=======
->>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
 }
