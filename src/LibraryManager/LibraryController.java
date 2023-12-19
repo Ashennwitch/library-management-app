@@ -52,6 +52,7 @@ public class LibraryController {
         }
     }
 
+<<<<<<< HEAD
     public void returnBook(String title) {
         // Find the book in the library model and mark it as available
         for (Book book : libraryModel.getBooks()) {
@@ -64,10 +65,13 @@ public class LibraryController {
         borrowedBooksModel.returnBorrowedBook(title);
     }
 
+=======
+>>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
     public void displayBorrowedBooks() {
         borrowedBooksModel.loadBorrowedBooksFromFile();
         borrowedBooksModel.displayBorrowedBooks();
     }
+<<<<<<< HEAD
 
     public String getAvailableBooks() {
         List<Book> books = libraryModel.getBooks();
@@ -93,4 +97,6 @@ public class LibraryController {
         return sb.toString();
     }
 
+=======
+>>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
 }

@@ -25,6 +25,7 @@ public class BorrowedBooksModel {
         saveBorrowedBooksToFile();
     }
 
+<<<<<<< HEAD
     public void returnBorrowedBook(String title) {
         BorrowedBook bookToRemove = null;
         for (BorrowedBook borrowedBook : borrowedBooks) {
@@ -43,6 +44,8 @@ public class BorrowedBooksModel {
         }
     }
 
+=======
+>>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
     public void displayBorrowedBooks() {
         System.out.println("Borrowed Books:");
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -50,7 +53,10 @@ public class BorrowedBooksModel {
             System.out.println("Title: " + borrowedBook.getTitle());
             System.out.println("Borrow Date: " + dateFormat.format(borrowedBook.getBorrowDate()));
             System.out.println("Return Date: " + dateFormat.format(borrowedBook.getReturnDate()));
+<<<<<<< HEAD
             System.out.println("Fine: Rp" + borrowedBook.getFine());
+=======
+>>>>>>> 80809cc41e30ed41491e7328e082c4010d3e86ee
             System.out.println();
         }
     }
