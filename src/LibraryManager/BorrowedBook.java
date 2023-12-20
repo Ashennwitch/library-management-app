@@ -13,7 +13,7 @@ public class BorrowedBook {
         this.returnDate = returnDate;
     }
 
-    private double calculateFine() {
+    public double calculateFine() {
         // A fixed fine rate per day for overdue books
         long overdueDays = Math.max(0, (new Date().getTime() - returnDate.getTime()) / (24 * 60 * 60 * 1000));
         double fineRate = 2000;
@@ -32,7 +32,4 @@ public class BorrowedBook {
         return returnDate;
     }
 
-    public double getFine() {
-        return fine;
-    }
 }

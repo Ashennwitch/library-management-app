@@ -43,30 +43,6 @@ public class BorrowedBooksModel {
         }
     }
 
-    public void displayBorrowedBooks() {
-        System.out.println("Borrowed Books:");
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        for (BorrowedBook borrowedBook : borrowedBooks) {
-            System.out.println("Title: " + borrowedBook.getTitle());
-            System.out.println("Borrow Date: " + dateFormat.format(borrowedBook.getBorrowDate()));
-            System.out.println("Return Date: " + dateFormat.format(borrowedBook.getReturnDate()));
-            System.out.println("Fine: Rp" + borrowedBook.getFine());
-            System.out.println();
-        }
-    }
-
-    public void loadBorrowedBooksFromFile() {
-        try (Reader reader = new FileReader("src\\LibraryManager\\json\\borrowedBooks.json")) {
-            Gson gson = new Gson();
-            borrowedBooks = gson.fromJson(reader, new TypeToken<List<BorrowedBook>>() {}.getType());
-            if (borrowedBooks == null) {
-                borrowedBooks = new ArrayList<>();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void saveBorrowedBooksToFile() {
         try (Writer writer = new FileWriter("src\\LibraryManager\\json\\borrowedBooks.json")) {
             Gson gson = new Gson();

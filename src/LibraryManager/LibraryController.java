@@ -72,7 +72,7 @@ public class LibraryController {
             sb.append("Title: " + borrowedBook.getTitle() + "\n");
             sb.append("Borrow Date: " + borrowedBook.getBorrowDate() + "\n");
             sb.append("Return Date: " + borrowedBook.getReturnDate() + "\n");
-            sb.append("Fine: Rp" + borrowedBook.getFine() + "\n\n");
+            sb.append("Fine: Rp" + borrowedBook.calculateFine() + "\n\n");
         }
         return sb.toString();
     }
